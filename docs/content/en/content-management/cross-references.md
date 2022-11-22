@@ -39,9 +39,9 @@ The pages can be referenced as follows:
 
 ```text
 {{</* ref "document2" */>}}             // <- From pages/document1.md, relative path
-{{</* ref "document2#anchor" */>}}      
-{{</* ref "document2.md" */>}}          
-{{</* ref "document2.md#anchor" */>}}   
+{{</* ref "document2#anchor" */>}}
+{{</* ref "document2.md" */>}}
+{{</* ref "document2.md#anchor" */>}}
 {{</* ref "#anchor" */>}}               // <- From pages/document2.md
 {{</* ref "/blog/my-post" */>}}         // <- From anywhere, absolute path
 {{</* ref "/blog/my-post.md" */>}}
@@ -142,7 +142,7 @@ produces this HTML:
 The behavior can, since Hugo 0.45, be configured in `config.toml`:
 
 refLinksErrorLevel ("ERROR")
-: When using `ref` or `relref` to resolve page links and a link cannot resolved, it will be logged with this log level. Valid values are `ERROR` (default) or `WARNING`. Any `ERROR` will fail the build (`exit -1`).
+: When using `ref` or `relref` to resolve page links and a link cannot resolved, it will be logged with this log level. Valid values are `ERROR` (default) or `WARNING` or `SILENT`. Any `ERROR` will fail the build (`exit -1`).
 
 refLinksNotFoundURL
 : URL to be used as a placeholder when a page reference cannot be found in `ref` or `relref`. Is used as-is.

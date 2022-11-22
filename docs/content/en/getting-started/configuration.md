@@ -384,7 +384,7 @@ Enable this to make all relative URLs relative to content root. Note that this d
 
 **Default value:** "ERROR"
 
-When using `ref` or `relref` to resolve page links and a link cannot be resolved, it will be logged with this log level. Valid values are `ERROR` (default) or `WARNING`. Any `ERROR` will fail the build (`exit -1`).
+When using `ref` or `relref` to resolve page links and a link cannot be resolved, it will be logged with this log level. Valid values are `ERROR` (default) or `WARNING` or `SILENT`. Any `ERROR` will fail the build (`exit -1`).
 
 ### refLinksNotFoundURL
 

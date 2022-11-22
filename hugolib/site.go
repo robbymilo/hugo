@@ -821,6 +821,8 @@ func newSiteRefLinker(cfg config.Provider, s *Site) (siteRefLinker, error) {
 	errLevel := cfg.GetString("refLinksErrorLevel")
 	if strings.EqualFold(errLevel, "warning") {
 		logger = s.Log.Warn()
+	} else if strings.EqualFold(errLevel, "silent") {
+		logger = s.Log.Info()
 	}
 	return siteRefLinker{s: s, errorLogger: logger, notFoundURL: notFoundURL}, nil
 }
